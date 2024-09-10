@@ -1,23 +1,21 @@
-import React from 'react'
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 function App() {
-
-const [color, setColor] = useState('Red');
-
-const changeColor = ()=>{
-setColor('Blue')
-
-}
+  const [car, setCar] = useState({
+    brand: "Ferrari",
+    model: "Roma",
+    year: "2023",
+    color: "red"
+  });
 
   return (
     <>
-      <div className="App"><h1>My favourite color is {color}!</h1></div>
-      <button onClick={changeColor}>Blue</button>
-      
+      <h1>My {car.brand}</h1>
+      <h2>It is a {car.color} {car.model} from {car.year}</h2>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
+
