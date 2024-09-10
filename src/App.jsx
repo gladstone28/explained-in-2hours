@@ -2,17 +2,15 @@
 import React, { useState } from 'react';
 
 function App() {
-  const [car, setCar] = useState({
-    brand: "Ferrari",
-    model: "Roma",
-    year: "2023",
-    color: "red"
-  });
+const [count, setCount] = useState(0);
+const increaseCount = ()=>{
+setCount(count + 1)
 
+}
   return (
     <>
-      <h1>My {car.brand}</h1>
-      <h2>It is a {car.color} {car.model} from {car.year}</h2>
+<h1>Count: {count}</h1>
+      <button onClick={increaseCount}>Increase</button>
     </>
   );
 }
