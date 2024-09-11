@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 
 function App() {
+
 const [count, setCount] = useState(0);
 const increaseCount = ()=>{
 setCount(prev=>prev + 1)
